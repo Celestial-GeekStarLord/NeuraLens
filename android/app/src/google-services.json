@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1004929737963",
+    "project_id": "neuralens-7548c",
+    "storage_bucket": "neuralens-7548c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004929737963:android:2b088a1acac48b1262caae",
+        "android_client_info": {
+          "package_name": "com.example.firstone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1aExVwDLNBWXtcvUpymmEuTgiG6r_81w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
