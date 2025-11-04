@@ -1,6 +1,6 @@
-# firstone
+# First Prototype
 
-A new Flutter project.
+NeuraLens - AI Powered Solution App for Visually Impaired Individual
 
 ## Getting Started
 
