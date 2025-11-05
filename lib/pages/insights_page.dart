@@ -16,7 +16,7 @@ class InsightsPage extends StatelessWidget {
 
       body: const Center(
         child: Text(
-          "Here you’ll see advanced insights and logs "
+          "Here you’ll see feedbacks and logs "
           "from your Gemini interactions soon.",
           style: TextStyle(fontSize: 18),
         ),

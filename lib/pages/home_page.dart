@@ -573,6 +573,17 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
             onTap: () => Navigator.pushNamed(context, "/settings"),
           ),
+          ListTile(
+            leading: const Icon(
+              Icons.rocket_launch_sharp,
+              color: Colors.cyanAccent,
+            ),
+            title: const Text(
+              "Your Thoughts",
+              style: TextStyle(color: Colors.cyanAccent),
+            ),
+            onTap: () => Navigator.pushReplacementNamed(context, "/feedback"),
+          ),
         ],
       ),
     );

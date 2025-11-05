@@ -85,4 +85,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'neuralens-7548c.firebasestorage.app',
     measurementId: 'G-KS1J4WKMQZ',
   );
+
 }

@@ -55,6 +55,17 @@ class AppDrawer extends StatelessWidget {
             ),
             onTap: () => Navigator.pushReplacementNamed(context, "/settings"),
           ),
+          ListTile(
+            leading: const Icon(
+              Icons.rocket_launch_sharp,
+              color: Colors.cyanAccent,
+            ),
+            title: const Text(
+              "Your Thoughts",
+              style: TextStyle(color: Colors.cyanAccent),
+            ),
+            onTap: () => Navigator.pushReplacementNamed(context, "/feedback"),
+          ),
         ],
       ),
     );
