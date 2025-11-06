@@ -71,12 +71,12 @@ class _SplashScreenState extends State<SplashScreen>
     ).animate(CurvedAnimation(parent: _textController, curve: Curves.easeOut));
 
     // Delay text appearance by 2 seconds
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 1), () {
       _textController.forward();
     });
 
     // Delay before moving to main screen
-    Future.delayed(const Duration(seconds: 4), () {
+    Future.delayed(const Duration(seconds: 2), () {
       widget.onInitializationComplete();
     });
   }
