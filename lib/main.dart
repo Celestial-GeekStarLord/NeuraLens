@@ -1,6 +1,7 @@
 import 'package:firstone/pages/about_page.dart';
 import 'package:firstone/pages/feedback_page.dart';
 import 'package:firstone/pages/insights_page.dart';
+import 'package:firstone/pages/obj_detection.dart';
 import 'package:firstone/pages/settings_page.dart';
 import 'package:firstone/pages/feedback_page.dart';
 import 'package:flutter/material.dart';
@@ -56,6 +57,7 @@ class MyApp extends StatelessWidget {
         '/insights': (_) => const InsightsPage(),
         '/settings': (_) => const SettingsPage(),
         '/feedback': (_) => const FeedbackPage(),
+        '/obj_detection': (_) => const ObjectDetectionPage(),
       },
 
       home: SplashScreen(

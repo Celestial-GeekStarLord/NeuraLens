@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'dart:math';
+import 'package:firstone/widgets/app_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:camera/camera.dart';
@@ -151,7 +152,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: _buildDrawer(context),
+      drawer: const AppDrawer(),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 0, 0, 0).withOpacity(1),
         elevation: 0,
@@ -513,76 +514,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 ],
               ),
             ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Drawer _buildDrawer(BuildContext context) {
-    return Drawer(
-      backgroundColor: Colors.black.withOpacity(0.9),
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: [
-          const DrawerHeader(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Colors.teal, Color.fromARGB(255, 245, 247, 246)],
-              ),
-            ),
-            child: Text(
-              "NeuraLens Menu",
-              style: TextStyle(
-                fontSize: 22,
-                color: Color.fromARGB(255, 0, 0, 0),
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          ListTile(
-            leading: const Icon(Icons.home, color: Colors.cyanAccent),
-            title: const Text(
-              "Home",
-              style: TextStyle(color: Colors.cyanAccent),
-            ),
-            // Intentionally no navigation: you're already on Home.
-            onTap: () => Navigator.pop(context),
-          ),
-          ListTile(
-            leading: const Icon(Icons.menu_book, color: Colors.cyanAccent),
-            title: const Text(
-              "About Us",
-              style: TextStyle(color: Colors.cyanAccent),
-            ),
-            onTap: () => Navigator.pushNamed(context, "/about"),
-          ),
-          ListTile(
-            leading: const Icon(Icons.memory, color: Colors.cyanAccent),
-            title: const Text(
-              "Neural Insights",
-              style: TextStyle(color: Colors.cyanAccent),
-            ),
-            onTap: () => Navigator.pushNamed(context, "/insights"),
-          ),
-          ListTile(
-            leading: const Icon(Icons.settings, color: Colors.cyanAccent),
-            title: const Text(
-              "Settings",
-              style: TextStyle(color: Colors.cyanAccent),
-            ),
-            onTap: () => Navigator.pushNamed(context, "/settings"),
-          ),
-          ListTile(
-            leading: const Icon(
-              Icons.rocket_launch_sharp,
-              color: Colors.cyanAccent,
-            ),
-            title: const Text(
-              "Your Thoughts",
-              style: TextStyle(color: Colors.cyanAccent),
-            ),
-            onTap: () => Navigator.pushReplacementNamed(context, "/feedback"),
           ),
         ],
       ),

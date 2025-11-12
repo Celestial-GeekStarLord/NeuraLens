@@ -76,7 +76,7 @@ class _SplashScreenState extends State<SplashScreen>
     });
 
     // Delay before moving to main screen
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 4), () {
       widget.onInitializationComplete();
     });
   }

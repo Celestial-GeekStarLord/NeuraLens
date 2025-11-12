@@ -66,6 +66,15 @@ class AppDrawer extends StatelessWidget {
             ),
             onTap: () => Navigator.pushReplacementNamed(context, "/feedback"),
           ),
+          ListTile(
+            leading: const Icon(Icons.settings, color: Colors.cyanAccent),
+            title: const Text(
+              "Local AI",
+              style: TextStyle(color: Colors.cyanAccent),
+            ),
+            onTap: () =>
+                Navigator.pushReplacementNamed(context, "/obj_detection"),
+          ),
         ],
       ),
     );
