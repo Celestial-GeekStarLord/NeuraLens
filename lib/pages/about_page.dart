@@ -327,7 +327,7 @@ class _AboutScreenState extends State<AboutScreen>
     );
   }
 
-  Drawer _buildDrawer(BuildContext context) {
+  Drawer buildDrawer(BuildContext context) {
     return Drawer(
       backgroundColor: Colors.black.withOpacity(0.9),
       child: ListView(
@@ -368,6 +368,26 @@ class _AboutScreenState extends State<AboutScreen>
             leading: Icon(Icons.settings, color: Colors.cyanAccent),
             title: Text("Settings", style: TextStyle(color: Colors.cyanAccent)),
             onTap: () => Navigator.pushNamed(context, "/settings"),
+          ),
+          ListTile(
+            leading: const Icon(
+              Icons.rocket_launch_sharp,
+              color: Colors.cyanAccent,
+            ),
+            title: const Text(
+              "Your Thoughts",
+              style: TextStyle(color: Colors.cyanAccent),
+            ),
+            onTap: () => Navigator.pushReplacementNamed(context, "/feedback"),
+          ),
+          ListTile(
+            leading: const Icon(Icons.settings, color: Colors.cyanAccent),
+            title: const Text(
+              "Local AI",
+              style: TextStyle(color: Colors.cyanAccent),
+            ),
+            onTap: () =>
+                Navigator.pushReplacementNamed(context, "/obj_detection"),
           ),
         ],
       ),

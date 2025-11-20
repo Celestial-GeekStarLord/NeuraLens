@@ -216,11 +216,11 @@ class _FeedbackPageState extends State<FeedbackPage>
                               builder: (context, _) {
                                 return Container(
                                   width: double.infinity,
-                                  padding: const EdgeInsets.symmetric(
-                                    vertical: 14,
-                                  ),
+                                  padding: const EdgeInsets.all(
+                                    1.8,
+                                  ), // thinner border
                                   decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(30),
+                                    borderRadius: BorderRadius.circular(14),
                                     gradient: SweepGradient(
                                       colors: const [
                                         Colors.red,
@@ -230,6 +230,7 @@ class _FeedbackPageState extends State<FeedbackPage>
                                         Colors.blue,
                                         Colors.purple,
                                         Colors.pink,
+                                        Colors.red,
                                       ],
                                       transform: GradientRotation(
                                         controller.value * 2 * math.pi,
@@ -238,13 +239,12 @@ class _FeedbackPageState extends State<FeedbackPage>
                                   ),
                                   child: Container(
                                     alignment: Alignment.center,
-                                    margin: const EdgeInsets.all(2),
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
+                                      borderRadius: BorderRadius.circular(12),
                                       color: Colors.black,
                                     ),
                                     padding: const EdgeInsets.symmetric(
-                                      vertical: 12,
+                                      vertical: 14,
                                     ),
                                     child: _isSubmitting
                                         ? const CircularProgressIndicator(

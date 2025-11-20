@@ -24,36 +24,27 @@ class AppDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: const Icon(Icons.home, color: Colors.cyanAccent),
-            title: const Text(
-              "Home",
-              style: TextStyle(color: Colors.cyanAccent),
-            ),
+            leading: Icon(Icons.home, color: Colors.cyanAccent),
+            title: Text("Home", style: TextStyle(color: Colors.cyanAccent)),
             onTap: () => Navigator.pushReplacementNamed(context, "/"),
           ),
           ListTile(
-            leading: const Icon(Icons.menu_book, color: Colors.cyanAccent),
-            title: const Text(
-              "About Us",
-              style: TextStyle(color: Colors.cyanAccent),
-            ),
-            onTap: () => Navigator.pushReplacementNamed(context, "/about"),
+            leading: Icon(Icons.menu_book, color: Colors.cyanAccent),
+            title: Text("About Us", style: TextStyle(color: Colors.cyanAccent)),
+            onTap: () => Navigator.pushNamed(context, "/about"),
           ),
           ListTile(
-            leading: const Icon(Icons.memory, color: Colors.cyanAccent),
-            title: const Text(
+            leading: Icon(Icons.memory, color: Colors.cyanAccent),
+            title: Text(
               "Neural Insights",
               style: TextStyle(color: Colors.cyanAccent),
             ),
-            onTap: () => Navigator.pushReplacementNamed(context, "/insights"),
+            onTap: () => Navigator.pushNamed(context, "/insights"),
           ),
           ListTile(
-            leading: const Icon(Icons.settings, color: Colors.cyanAccent),
-            title: const Text(
-              "Settings",
-              style: TextStyle(color: Colors.cyanAccent),
-            ),
-            onTap: () => Navigator.pushReplacementNamed(context, "/settings"),
+            leading: Icon(Icons.settings, color: Colors.cyanAccent),
+            title: Text("Settings", style: TextStyle(color: Colors.cyanAccent)),
+            onTap: () => Navigator.pushNamed(context, "/settings"),
           ),
           ListTile(
             leading: const Icon(

@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.firstone"
+    namespace = "com.example.firstone" 
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -24,7 +24,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.firstone"
-        minSdk = flutter.minSdkVersion
+        minSdk = 26 
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName

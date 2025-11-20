@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
         '/insights': (_) => const InsightsPage(),
         '/settings': (_) => const SettingsPage(),
         '/feedback': (_) => const FeedbackPage(),
-        '/obj_detection': (_) => const ObjectDetectionPage(),
+        //       '/obj_detection': (_) => const ObjectDetectionPage(),
       },
 
       home: SplashScreen(
