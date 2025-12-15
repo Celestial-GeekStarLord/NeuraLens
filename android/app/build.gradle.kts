@@ -7,14 +7,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.firstone" 
+    namespace = "com.example.firstone"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
-        // 👇 enable desugaring
         isCoreLibraryDesugaringEnabled = true
     }
 
@@ -24,31 +23,37 @@ android {
 
     defaultConfig {
         applicationId = "com.example.firstone"
-        minSdk = 26 
+        minSdk = 26
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
 
     buildTypes {
-        release {
-            // TODO: Add your own signing config for the release build.
+        getByName("release") {
+            isMinifyEnabled = true
+            isShrinkResources = true
+
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+
             signingConfig = signingConfigs.getByName("debug")
         }
     }
-}
+} // ✅ THIS was missing
 
 flutter {
     source = "../.."
 }
 
 dependencies {
-    // Kotlin + AndroidX
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7")
 
-    // Enable Java 8+ APIs (needed for some plugins like notifications)
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
+
     implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
     implementation("com.google.firebase:firebase-analytics")
 }
