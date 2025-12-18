@@ -1,6 +1,6 @@
 # First Prototype
 
-NeuraLens - AI Powered Solution App for Visually Impaired Individual
+NeuraLens - AI Powered Solution App for Visually Impaired Individual. This is experimental for wearable Hardware Raspberry Pi integration with Camera attached to glasses
 
 ## Getting Started
 
