@@ -8,7 +8,7 @@ enum GeminiVisionMode { describe, listItems }
 class GeminiService {
   /// 🔐 Firebase Function endpoint
   static const String _endpoint =
-      "https://us-central1-YOUR_PROJECT_ID.cloudfunctions.net/analyzeImage";
+      "https://for-back-end-api-gemini-using-render.onrender.com";
 
   static Future<String> analyzeImage({
     required String query,
