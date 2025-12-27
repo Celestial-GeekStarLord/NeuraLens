@@ -28,12 +28,6 @@ class _InsightsPageState extends State<InsightsPage>
       'time': 'Yesterday, 7:20 PM',
       'color': Colors.deepPurpleAccent,
     },
-    {
-      'mode': 'Describe Mode',
-      'summary': 'Captured and described a sunset scene with enhanced detail.',
-      'time': 'Nov 3, 2025',
-      'color': Colors.orangeAccent,
-    },
   ];
 
   @override
