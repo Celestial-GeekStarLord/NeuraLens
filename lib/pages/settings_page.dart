@@ -14,7 +14,7 @@ class _SettingsPageState extends State<SettingsPage>
   late AnimationController _controller;
 
   bool _voiceEnabled = true;
-  bool _cameraAssist = true;
+  bool _cameraAssist = true; // kept for functionality consistency
   double _speechRate = 1.0;
   bool _darkMode = true;
 
@@ -97,7 +97,6 @@ class _SettingsPageState extends State<SettingsPage>
         animation: _controller,
         builder: (context, _) {
           return Container(
-            // 🌌 Full gradient background
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
@@ -112,14 +111,12 @@ class _SettingsPageState extends State<SettingsPage>
             ),
             child: Stack(
               children: [
-                // ✨ Animated floating lights
                 Positioned.fill(
                   child: CustomPaint(
                     painter: _AnimatedStarsPainter(_controller),
                   ),
                 ),
 
-                // 🔧 Scrollable content that fully expands
                 SingleChildScrollView(
                   child: ConstrainedBox(
                     constraints: BoxConstraints(
@@ -159,29 +156,16 @@ class _SettingsPageState extends State<SettingsPage>
                             ),
                             const SizedBox(height: 40),
 
-                            // 🎤 Voice Assistant
+                            // 🎤 Single Describe Mode (Voice Assistant)
                             _buildSettingTile(
                               icon: Icons.record_voice_over_rounded,
-                              title: "Voice Assistant",
+                              title: "Describe Mode",
                               glowColor: Colors.cyanAccent,
                               control: Switch(
                                 value: _voiceEnabled,
                                 activeColor: Colors.cyanAccent,
                                 onChanged: (v) =>
                                     setState(() => _voiceEnabled = v),
-                              ),
-                            ),
-
-                            // 📷 Camera Assistance
-                            _buildSettingTile(
-                              icon: Icons.camera_alt_rounded,
-                              title: "Camera Assistance",
-                              glowColor: Colors.orangeAccent,
-                              control: Switch(
-                                value: _cameraAssist,
-                                activeColor: Colors.orangeAccent,
-                                onChanged: (v) =>
-                                    setState(() => _cameraAssist = v),
                               ),
                             ),
 
@@ -218,7 +202,6 @@ class _SettingsPageState extends State<SettingsPage>
 
                             const Spacer(),
 
-                            // 💾 Save Button
                             ElevatedButton.icon(
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.deepPurpleAccent,
