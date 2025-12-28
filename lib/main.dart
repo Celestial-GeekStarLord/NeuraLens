@@ -1,7 +1,7 @@
 import 'package:firstone/pages/about_page.dart';
 import 'package:firstone/pages/feedback_page.dart';
 import 'package:firstone/pages/insights_page.dart';
-import 'package:firstone/pages/obj_detection.dart';
+
 import 'package:firstone/pages/settings_page.dart';
 // import 'package:firstone/pages/feedback_page.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +33,7 @@ Future<void> main() async {
 
 class MyApp extends StatelessWidget {
   final List<CameraDescription> cameras;
+
   const MyApp({super.key, required this.cameras});
 
   @override
@@ -52,14 +53,15 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
 
+      /// ✅ Named routes
       routes: {
         '/about': (_) => const AboutScreen(),
         '/insights': (_) => const InsightsPage(),
         '/settings': (_) => const SettingsPage(),
         '/feedback': (_) => const FeedbackPage(),
-        //       '/obj_detection': (_) => const ObjectDetectionPage(),
       },
 
+      /// Splash → Home
       home: SplashScreen(
         onInitializationComplete: () {
           navigatorKey.currentState?.pushReplacement(
