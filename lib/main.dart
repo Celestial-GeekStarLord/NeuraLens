@@ -3,7 +3,7 @@ import 'package:firstone/pages/feedback_page.dart';
 import 'package:firstone/pages/insights_page.dart';
 import 'package:firstone/pages/obj_detection.dart';
 import 'package:firstone/pages/settings_page.dart';
-import 'package:firstone/pages/feedback_page.dart';
+// import 'package:firstone/pages/feedback_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:camera/camera.dart';

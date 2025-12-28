@@ -2,14 +2,14 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
 import 'package:http/http.dart' as http;
+import 'package:flutter_dotenv/flutter_dotenv.dart'; // <--- Need to import dotenv
 
 /// Modes for vision response
 enum GeminiVisionMode { describe, listItems }
 
 class GeminiService {
   /// 🌐 Render backend endpoint
-  static const String _baseUrl =
-      "https://for-back-end-api-gemini-using-render.onrender.com";
+  static final String _baseUrl = dotenv.env['BASE_URL']!;
 
   static const Duration _timeout = Duration(seconds: 60);
 
