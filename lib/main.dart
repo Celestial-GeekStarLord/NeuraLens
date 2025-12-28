@@ -1,7 +1,7 @@
 import 'package:firstone/pages/about_page.dart';
 import 'package:firstone/pages/feedback_page.dart';
 import 'package:firstone/pages/insights_page.dart';
-import 'package:firstone/pages/ocr.dart';
+
 import 'package:firstone/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -58,7 +58,6 @@ class MyApp extends StatelessWidget {
         '/insights': (_) => const InsightsPage(),
         '/settings': (_) => const SettingsPage(),
         '/feedback': (_) => const FeedbackPage(),
-        '/ocr': (_) => OCRPage(cameras: cameras),
       },
 
       /// Splash → Home
